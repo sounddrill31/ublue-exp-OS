@@ -16,8 +16,8 @@ dnf5 install -y tmux
 #flatpak install --assumeyes --noninteractive flathub com.vscodium.codium
 
 # Disable and stop the automatic update services for both ublue-update/uupd and rpm-ostree
-systemctl disable uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service && \
-systemctl stop uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service
+#systemctl disable uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service && \
+#systemctl stop uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service
 
 # Use a COPR Example:
 #
