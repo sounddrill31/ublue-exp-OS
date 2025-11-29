@@ -12,6 +12,13 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+# Flatpak installs
+flatpak install flathub com.vscodium.codium
+
+# Disable and stop the automatic update services for both ublue-update/uupd and rpm-ostree
+systemctl disable uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service && \
+systemctl stop uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
