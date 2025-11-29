@@ -13,7 +13,7 @@ set -ouex pipefail
 dnf5 install -y tmux 
 
 # Flatpak installs
-flatpak install flathub com.vscodium.codium
+flatpak install --assumeyes --noninteractive flathub com.vscodium.codium
 
 # Disable and stop the automatic update services for both ublue-update/uupd and rpm-ostree
 systemctl disable uupd.timer uupd.service rpm-ostreed-automatic.timer rpm-ostreed-automatic.service && \
